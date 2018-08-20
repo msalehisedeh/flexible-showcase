@@ -3,11 +3,15 @@
 
 Have you ever wanted to have a flexible product showcase for your Product evaluation Page? Have you thought of what it takes to get the showsace? With product showcase, you can configure position of product display.
 
+**NOTE:** Starting with version 1.1.0 this library is compatible with Angular 6+.
+
 Please send your requests or comments through the link provided below:
 
-[Live Demo](https://flexible-showcase.stackblitz.io)  | [Source code](https://github.com/msalehisedeh/flexible-showcase) | [Comments/Requests](https://github.com/msalehisedeh/flexible-showcase/issues)
+[Live Demo](https://flexible-showcase.stackblitz.io)  | [Source code](https://github.com/msalehisedeh/flexible-showcase/tree/master/src/app) | [Comments/Requests](https://github.com/msalehisedeh/flexible-showcase/issues)
 
 
+# Version 1.1.0
+Updated libraries to become compatible with Angular 6+. 
 
 # Version 1.0.0
 
