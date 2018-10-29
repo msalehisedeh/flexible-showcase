@@ -4,9 +4,9 @@ import {
 	Input,
 	Output,
 	AfterContentInit,
+	ElementRef,
 	EventEmitter,
 	ViewChild,
-	ElementRef,
 	OnChanges
 } from '@angular/core';
 

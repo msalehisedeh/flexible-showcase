@@ -9,7 +9,7 @@
             [class.left]="position == 'top'"
             [class.up]="position == 'left'"
             *ngIf="paginate" 
-            (click)="shiftDisplay(position, flase)">
+            (click)="shiftDisplay(position, false)">
             <span *ngIf="position === 'top'" class="fa fa-angle-left" aria-hidden="true"></span>
             <span *ngIf="position === 'left'" class="fa fa-angle-up" aria-hidden="true"></span>
         </div>
@@ -80,7 +80,7 @@
             [class.left]="position == 'bottom'"
             [class.up]="position == 'right'"
             *ngIf="paginate" 
-            (click)="shiftDisplay(position, flase)">
+            (click)="shiftDisplay(position, false)">
             <span *ngIf="position === 'bottom'" class="fa fa-angle-left" aria-hidden="true"></span>
             <span *ngIf="position === 'right'" class="fa fa-angle-up" aria-hidden="true"></span>
         </div>
@@ -90,8 +90,8 @@
             tabindex="0"
             (keyup)="keyup($event)" 
             (click)="selectTab(i)"
-            (focus)="hoverTab(i)"
-            (mouseenter)="hoverTab(i)"
+            (focus)="hoverTab(i, false)"
+            (mouseenter)="hoverTab(i, true)"
             [title]="item.title" 
             [class.selected]="item.selected">
             <span class="off-screen" [textContent]="message"></span>
