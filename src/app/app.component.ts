@@ -17,6 +17,7 @@ export class AppComponent {
       thumbnailId: "1", 
       title:"apron video", 
       type:'video',
+      poster: 'https://www.skandium.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/n/snaps-high.jpg',
       src: {
         egg: "https://theorganiccompany.dk/new/wp-content/uploads/2017/06/Long_Apron_The_Organic_Company_lowres.mp4",
         mp4: "https://theorganiccompany.dk/new/wp-content/uploads/2017/06/Long_Apron_The_Organic_Company_lowres.mp4",

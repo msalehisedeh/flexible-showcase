@@ -21,6 +21,11 @@
             width: 100%;
         }
 
+        img {
+            &.content {
+                pointer-events: none;
+            }
+        }
         .hover {
             position: absolute;
             background-color: #fff;
@@ -55,11 +60,23 @@
                     font-weight: bold;
                     margin: 99% 30%;
                     font-size: 1.6rem;
+                    display: table;
+                    line-height: 1rem;
                 }
             }
             .sliding-viewport {
                 &.paginate {
-                    width: calc(100% - 40px);
+                    flex: 1;
+                    width: 100%;
+                    overflow: hidden;
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: row;
+                        transition: transform 300ms linear;
+                    }
                 }
             }
         }
@@ -83,11 +100,23 @@
                     font-weight: bold;
                     margin: 0 29%;
                     font-size: 1.6rem;
+                    display: table;
+                    line-height: 1rem;
                 }
             }
             .sliding-viewport {
                 &.paginate {
-                    height: calc(100% - 40px);
+                    flex: 1;
+                    height: 100%;
+                    overflow: hidden; 
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        transition: transform 300ms linear;
+                    }
                 }
             }
         }

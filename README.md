@@ -35,15 +35,20 @@ In this example:
 3) message is needed to set text in order to make ADA compliant message on each tab.
 4) myHoverOption, myTrackOption, and myPickOption are boolean variables.
 5) myItems will contain display information
+6) hasControls indicates if video should display controls
+7) hoverPlay indicates if video should play on hover
 
 <showcase 
       width="400" 
       height="400"
-      message="click to select " 
+      message="click to select "
+      [hasControls]="true"
+      [hoverPlay]="false"
       [position]="myPosition" 
       [enableEventTracking]="myTrackOption"
       [peekOnHover]="myPickOption"
       [zoomOnHover]="myHoverOption"
+      [magnificationFactor]="2"
       [thumbnails]="myItems"
       [productId]="myProductId"
       (onEventTracking)="onEventTracking($event)"></showcase>
@@ -56,6 +61,7 @@ if a thumbnail is of video type, it will look like:
   thumbnailId: string, 
   title: string, 
   type: string, // video
+  poster?: string, // video poster image URL
   src: {
     egg: string, // URL
     mp4: string, // URL,
@@ -99,6 +105,11 @@ CSS Example:
 
 | Version | Description                                                                                              |
 |---------|----------------------------------------------------------------------------------------------------------|
+| 2.0.0   | Upgraded to Angular 8.                                                                                   |
+| 1.2.5   | Resolved problem of displaying video on mobile.                                                          |
+| 1.2.4   | Added keyboard handling for paginated products row. Added smooth animation of paginated area.            |
+| 1.2.3   | Added keyboard handling for video.                                                                       |
+| 1.2.2   | Added magnificationFactor to allow for suitable magnification of image on hover depending on application which is using this component. |
 | 1.2.1   | Updated dependencies.                                                                                    |
 | 1.2.0   | It was brought to my attention that some users have trouble using my components in their angular 6 environment. Since I had only updated few dependencies when moved to Angular 6, I am thinking dependencies are causing issues. So, for this release, I am updating all dependencies to what Angular 6 applications are expecting to have. Please let me know if this is fixing or not fixing any issues you are facing. |
 | 1.1.0   | Updated libraries to become compatible with Angular 6+.                                                  |

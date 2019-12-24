@@ -1,6 +1,7 @@
 import { AfterContentInit, OnChanges } from '@angular/core';
 export declare class FlexibleShowcaseComponent implements AfterContentInit, OnChanges {
     private translatedPosition;
+    shiftedIndex: number;
     selectedIndex: number;
     selectedItem: any;
     hoverItem: any;
@@ -9,26 +10,30 @@ export declare class FlexibleShowcaseComponent implements AfterContentInit, OnCh
     private slider;
     position: string;
     width: number;
+    hasControls: boolean;
+    hoverPlay: boolean;
     height: number;
     productId: string;
     zoomOnHover: boolean;
     peekOnHover: boolean;
     enableEventTracking: boolean;
+    magnificationFactor: number;
     thumbnails: any[];
     message: string;
     private onEventTracking;
     constructor();
     ngAfterContentInit(): void;
     ngOnChanges(changes: any): void;
-    hoverOver(event: any, item: any): void;
+    hoverOver(event: any): void;
     hoverOut(event: any): void;
     hoverViewPort(event: any): void;
-    shiftDisplay(position: any, toEnd: any): void;
+    shiftDisplay(slider: HTMLElement, position: string, toEnd: boolean): void;
+    updateControls(event: any): void;
+    resetControls(event: any): void;
+    private isPlaying;
+    videoKeyup(event: any): void;
     keyup(event: any): void;
-    videoPlayed(item: any, trackingTime: any): void;
-    videoPaused(item: any, trackingTime: any): void;
-    videoEnded(item: any, trackingTime: any): void;
-    hoverTab(i: any, onhover: any): void;
-    selectTab(i: any): void;
-    private fireTrackingEvent(name, id, event, track?);
+    videoEvent(event: any): void;
+    hoverTab(i: number, slider: HTMLElement, position: string, onhover: boolean): void;
+    selectTab(i: number): void;
 }

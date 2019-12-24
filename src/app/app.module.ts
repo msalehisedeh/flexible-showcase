@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,7 @@ import { FlexibleShowcaseModule } from './flexible-showcase/flexible-showcase-mo
     AppComponent
   ],
   imports: [
+    BrowserModule,
     CommonModule,
     FormsModule,
     FlexibleShowcaseModule
