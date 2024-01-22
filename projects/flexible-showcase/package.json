@@ -1,0 +1,27 @@
+{
+  "name": "@sedeh/flexible-showcase",
+  "version": "3.0.1",
+  "peerDependencies": {
+    "@angular/common": "^15.2.0",
+    "@angular/core": "^15.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "keywords": [
+    "angular 6+",
+    "PEP",
+    "showcase",
+    "responsive",
+    "Product Evaluation Page",
+    "configurable",
+    "icon",
+    "icon toggle",
+    "icon button",
+    "flexible",
+    "ADA compliant",
+    "easy to use",
+    "best"
+  ],
+  "sideEffects": false
+}

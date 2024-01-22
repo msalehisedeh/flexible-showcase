@@ -1,0 +1,42 @@
+
+.controllers {
+    width: 100%;
+    display: table;
+}
+.flexible {
+    display: flex;
+}
+.logger {
+    box-sizing: border-box;
+    display: inline-block;
+    max-height: 404px;
+    overflow-y: auto;
+    margin-bottom: 45px;
+    width: 100%;
+    margin: 0;
+}
+h3 {
+    margin: 0 0 20px 0;
+}
+.resources {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #551234;
+    font-weight: bold;
+}
+.pick-points {
+    margin: 16px auto 8px auto;
+    border: 2px groove rgba(0, 0, 0, 0.1);
+    height: 46px;
+}
+.log-field {
+    width: 100%;
+    margin-top:20px;
+}
+
+showcase {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+}

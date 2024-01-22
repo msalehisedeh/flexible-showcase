@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class="resources">
+  <a href="https://www.npmjs.com/package/@sedeh/flexible-showcase"
+    >npm install &#64;sedeh/flexible-showcase</a
+  >
+  <p>Tested On Safari, Chrome, Mozilla, and IE11 browsers.</p>
+</div>
+<div class="controllers">
+<fieldset class="pick-points">
+  <legend>Position</legend>
+  <label for="top-selection"><input id="top-selection" name="myPosition" type="radio" [checked]="myPosition === 'top'" (click)="myPosition = 'top'" />Top</label>
+  <label for="bottom-selection"><input id="bottom-selection" name="myPosition" type="radio" [checked]="myPosition === 'bottom'" (click)="myPosition = 'bottom'" />Bottom</label>
+  <label for="left-selection"><input id="left-selection" name="myPosition" type="radio" [checked]="myPosition === 'left'" (click)="myPosition = 'left'" />Left</label>
+  <label for="right-selection"><input id="right-selection" name="myPosition" type="radio" [checked]="myPosition === 'right'" (click)="myPosition = 'right'" />Right</label>
+</fieldset>
+<fieldset class="pick-points">
+  <legend>Controls</legend>
+  <label for="hover-selection"><input id="hover-selection" name="myHoverOption" type="checkbox" [checked]="( myHoverOption === true )" (change)="myHoverOption = isChecked($event)" />Zoom Hero Image On Hover</label>
+  <label for="pick-selection"><input id="pick-selection" name="myPickOption" type="checkbox" [checked]="( myPickOption === true )" (change)="myPickOption = isChecked($event)" />Sneek Peek Side Item On Hover</label>
+  <label for="track-selection"><input id="track-selection" name="myTrackOption" type="checkbox" [checked]="( myTrackOption === true )" (change)="myTrackOption = isChecked($event)" />Enable Event Tracking</label>
+</fieldset>
+</div>
+<div class="flexible">
+<showcase 
+      [width]="400" 
+      [height]="400"
+      message="click to select " 
+      [position]="myPosition" 
+      [thumbnails]="myItems"
+      [magnificationFactor]="2"
+      [enableEventTracking]="myTrackOption"
+      [peekOnHover]="myPickOption"
+      [zoomOnHover]="myHoverOption"
+      [productId]="myProductId"
+      (onEventTracking)="onEventTracking($event)"></showcase>
+
+<fieldset class="log-field">
+  <legend>Event Logs</legend>
+  <ul class="logger">
+  <li *ngFor="let x of events" [textContent]="x | json"></li>
+</ul>
+</fieldset>
+</div>

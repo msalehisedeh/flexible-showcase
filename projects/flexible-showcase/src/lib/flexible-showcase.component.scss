@@ -1,0 +1,213 @@
+.showcase {
+    display: flex;
+    width: 100%;
+
+    .off-screen {
+        display: block;
+        float: left;
+        height: 0;
+        overflow: hidden;
+        text-indent: -99999px;
+        width: 0;
+    }
+    .showcase-viewport {
+        box-sizing: border-box;
+        border: 1px solid #bcd;
+        min-height: 150px;
+        overflow: hidden;
+        position: relative;
+
+        ::ng-deep img, video {
+            width: 100%;
+        }
+
+        img {
+            &.content {
+                pointer-events: none;
+            }
+        }
+        .hover {
+            position: absolute;
+            background-color: #fff;
+            top: -10000px;
+            left: -10000px;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    .showcase-control {
+        border: 1px solid #bcd;
+        box-sizing: border-box;
+        display: flex;
+
+        &.top, &.bottom {
+            flex-direction: row;
+            overflow: hidden;
+
+            .slide-control {
+                width: 20px;
+                height: inherit;
+                background-color: #fff;
+                z-index: 2;
+
+                &.left {
+                    border-right: 1px solid #bcd;
+                }
+                &.right {
+                    border-left: 1px solid #bcd;
+                }
+                .fa {
+                    font-weight: bold;
+                    margin: 99% 30%;
+                    font-size: 1.6rem;
+                    display: table;
+                    line-height: 1rem;
+                }
+            }
+            .sliding-viewport {
+                &.paginate {
+                    flex: 1;
+                    width: 100%;
+                    overflow: hidden;
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: row;
+                        transition: transform 300ms linear;
+                        a {
+                            position: relative;
+                            display: inline-block;
+                            .hover {
+                                display: none;
+                                background-color: rgba(0, 0, 0, 0.1);
+                                pointer-events: none;
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                min-height: 100%;
+                                z-index: 2;
+                            }
+                            &:focus,
+                            &:hover {
+                                .hover {
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.left, &.right {
+            flex-direction: column;
+            overflow: hidden;
+            
+            .slide-control {
+                height: 20px;
+                width: inherit;
+                background-color: #fff;
+                z-index: 2;
+
+                &.up {
+                    border-bottom: 1px solid #bcd;
+                }
+                &.down {
+                    border-top: 1px solid #bcd;
+                }
+                .fa {
+                    font-weight: bold;
+                    margin: 0 29%;
+                    font-size: 1.6rem;
+                    display: table;
+                    line-height: 1rem;
+                }
+            }
+            .sliding-viewport {
+                &.paginate {
+                    flex: 1;
+                    height: 100%;
+                    overflow: hidden; 
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        transition: transform 300ms linear;
+                    }
+                }
+            }
+        }
+        
+        .sliding-viewport {
+            display: flex;
+            a {
+                box-sizing: border-box;
+                white-space: nowrap;
+                border: 0;
+                cursor: pointer;
+                min-height: 60px;
+                ::ng-deep img, video {
+                    margin: auto o;
+                    width: 60px;
+                }
+            }
+        }
+    }
+    &.top {
+        flex-direction: column;
+        .showcase-control {
+            .sliding-viewport {
+                flex-direction: row;
+            }
+            flex-wrap: nowrap;
+        }
+    }
+    &.bottom {
+        flex-direction: column;
+        .showcase-control {
+            .sliding-viewport {
+                flex-direction: row;
+            }
+            flex-wrap: nowrap;
+        }
+    }
+    &.left {
+        flex-direction: row;
+        .showcase-control {
+            .sliding-viewport {
+                flex-direction: column;
+            }
+            flex-wrap: nowrap;
+            flex: 1;
+        }
+    }
+    &.right {
+        flex-direction: row;
+        .showcase-control {
+            .sliding-viewport {
+                flex-direction: column;
+            }
+            flex-wrap: nowrap;
+            flex: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .showcase {
+        display: table;
+    }
+    .showcase-control {
+        display: block;
+        a {
+            width: 100%;
+            display: table;
+        }
+    }
+    .showcase-viewport {
+        margin: 5px 0;
+    }
+}
