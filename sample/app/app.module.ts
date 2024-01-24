@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FlexibleShowcaseModule } from '.@sedeh/flexible-showcase';
+import { FlexibleShowcaseModule } from '@sedeh/flexible-showcase';
 
 @NgModule({
   declarations: [
