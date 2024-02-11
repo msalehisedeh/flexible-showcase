@@ -9,7 +9,7 @@ Have you ever wanted to have a flexible product showcase for your Product evalua
 
 Please send your requests or comments through the link provided below:
 
-[Live Demo](https://flexible-showcase.stackblitz.io)  | 
+[Live Demo](https://stackblitz.com/edit/flexible-showcase?file=src%2Fapp%2Fapp.component.ts)  | 
 [NPM](https://www.npmjs.com/package/@sedeh/flexible-showcase) | 
 [Comments/Requests](https://github.com/msalehisedeh/flexible-showcase/issues)
 
